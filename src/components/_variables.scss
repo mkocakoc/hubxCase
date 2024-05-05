@@ -1,0 +1,59 @@
+$font-primary-size: 16px;
+$font-secondary-size: 20px;
+$font-tertiary-size: 32px;
+$font-mobile-size: 14px;
+
+$font-family: 'sfpro', sans-serif;
+
+$font-primary-weight: 400;
+$font-secondary-weight: 500;
+$font-tertiary-weight: 700;
+$font-fourth-weight: 800;
+
+$primary-color: #0b122a;
+$secondary-color: #0381ff;
+$tertiary-color: #f5f5f5;
+$black-color: #000;
+$white-color: #fff;
+$border-color: #00000029;
+$background-secondary-color: #0381FF08;
+
+
+$text-right: right;
+$text-left: left;
+$text-center: center;
+
+$letter-primary-spacing: 2px;
+$letter-secondary-spacing: 0.8px;
+
+$line-primary-height: 19.09px;
+$line-secondary-height: 32px;
+$line-tertiary-height: 40px;
+$line-fourth-height: 23.87px;
+$line-fifth-height: 28px;
+
+button.primary {
+  padding: 15px 20px;
+  border: 1px solid $border-color; 
+  font-size: $font-secondary-size;
+  font-weight: $font-primary-weight;
+  line-height: $line-fourth-height;
+  text-align: center;
+  background: transparent;
+
+  &:hover {
+    background-color: #0381FF08;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin wide {
+    @media screen and (max-width: 1400px) {
+      @content;
+    }
+  }

@@ -1,3 +1,5 @@
+@import '../src/components/variables';
+
 .main {
   display: block;
 }
@@ -5,20 +7,252 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  padding-top: 54px;
 }
 
 .tabContent {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 28px;
 
-  & .content {
+  &.show.framezero {
+    .icons {
+      position: relative;
+      & img {
+        animation: slide-in 0.5s linear;
+      }
+    }
+  }
+  &.show.frameone {
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+    }
+    .icons {
+      position: absolute;
+      &__image1 {
+        position: absolute;
+        transform: translate(-110%, 260%);
+        width: 142px;
+        @include desktop {
+          width: unset;
+          transform: translate(-80%, 170%);
+        }
+        & img {
+          animation: fade-in 0.6s linear;
+        }
+      }
+      &__image2 {
+        transform: translate(135%, 200%);
+        width: 100px;
+        @include desktop {
+          width: unset;
+          transform: translate(75%, 70%);
+        }
+        & img {
+          animation: fade-in 1s linear;
+        }
+      }
+    }
+  }
+  &.show.frametwo {
+    .icons {
+      position: absolute;
+      bottom: 10px;
+      flex-direction: column;
+      justify-content: center;
+      &__image1 {
+        position: absolute;
+        transform: translate(56%, 45%);
+        width: 185px;
+        @include desktop {
+          width: unset;
+          transform: translate(50%, 48%);
+          scale: 0.9;
+        }
+        & img {
+          animation: fade-in 1.3s ease;
+        }
+      }
+      &__image2 {
+        transform: translate(50%, 101%);
+        width: 195px;
+        @include desktop {
+          width: unset;
+          transform: translate(47%, 103%);
+          scale: 0.95;
+        }
+        & img {
+          animation: fade-in 1.7s ease;
+        }
+      }
+      &__image3 {
+        transform: translate(45%, 5%);
+        width: 205px;
+        @include desktop {
+          width: unset;
+          transform: translate(45%, 3%);
+        }
+        & img {
+          animation: fade-in 2.2s ease;
+        }
+      }
+      &__image4 {
+        transform: translate(135%, 200%);
+        width: 100px;
+        @include desktop {
+          width: unset;
+          transform: translate(75%, 70%);
+        }
+        & img {
+          animation: fade-in 1s ease;
+        }
+      }
+    }
+  }
+  &.show.framethree {
+    .icons {
+      position: absolute;
+      bottom: 10px;
+      &__image1 {
+        position: absolute;
+        transform: translate(-110%, 260%);
+        width: 142px;
+        @include desktop {
+          width: unset;
+          transform: translate(-80%, 170%);
+        }
+        & img {
+          animation: fade-in 0.6s ease;
+        }
+      }
+      &__image2 {
+        transform: translate(135%, 200%);
+        width: 100px;
+        @include desktop {
+          width: unset;
+          transform: translate(75%, 70%);
+        }
+        & img {
+          animation: fade-in 1s ease;
+        }
+      }
+      &__image3 {
+        transform: translate(135%, 200%);
+        width: 100px;
+        @include desktop {
+          width: unset;
+          transform: translate(75%, 70%);
+        }
+        & img {
+          animation: fade-in 1s ease;
+        }
+      }
+      &__image4 {
+        transform: translate(135%, 200%);
+        width: 100px;
+        @include desktop {
+          width: unset;
+          transform: translate(75%, 70%);
+        }
+        & img {
+          animation: fade-in 1s ease;
+        }
+      }
+    }
+  }
+  &.show.framefour {
+    .icons {
+      position: absolute;
+      bottom: 10px;
+      &__image1 {
+        position: absolute;
+        bottom: 10px;
+      }
+      & img {
+        animation: slide-in 1s ease;
+      }
+    }
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .imageContainer {
+    order: 2;
+    position: relative;
+
+    @include desktop {
+      order: unset;
+    }
+
+    .bgImage {
+      position: relative;    
+    }
+
+    .icons {
+      display: flex;
+    }
+  }
+
+  .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
+    order: 1;
+
+    @include desktop {
+      order: unset;
+    }
     p {
-      text-align: right;
+      font-size: $font-mobile-size;
+      font-weight: $font-primary-weight;
+      color: $primary-color;
+      letter-spacing: $letter-secondary-spacing;
+      line-height: $line-secondary-height;
+      text-align: center;
+      margin-bottom: 32px;
+      @include desktop {
+        font-size: $font-primary-size;
+      }
+    }
+    h3 {
+      font-size: $font-primary-size;
+      font-weight: $font-fourth-weight;
+      color: $secondary-color;
+      letter-spacing: $letter-primary-spacing;
+      line-height: $line-primary-height;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: $font-tertiary-size;
+      font-weight: $font-tertiary-weight;
+      color: $primary-color;
+      line-height: $line-tertiary-height;
+      margin-bottom: 13px;
+    }
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      p {
+        text-align: right;
+      }
     }
   }
 }
@@ -32,6 +266,16 @@
   flex: 1;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+  @include desktop {
+    overflow: unset;
+  }
+  @include wide {
+    overflow: auto;
+  }
 }
 
 .tab {
@@ -42,10 +286,34 @@
   border-right: 1px solid #ccc; /* Tab'ler arasında border */
   justify-content: center;
   width: 100%;
+  min-width: fit-content;
+  gap: 16px;
+  @include desktop {
+    min-width: unset;
+  }
+  &.active {
+    background-color: $background-secondary-color;
+  }
+  .tabText {
+    font-size: $font-secondary-size;
+    font-weight: $font-secondary-weight;
+    color: $primary-color;
+    letter-spacing: $letter-secondary-spacing;
+    line-height: $line-fifth-height;
+    @include desktop {
+      font-size: $font-secondary-size;
+    }
+  }
 }
-.tab:hover {
+.tab:hover,
+.tab:active,
+.tab:focus {
   cursor: pointer;
-  background-color: #f5f5f5; /* Tab'in üzerine gelindiğinde arka plan rengi */
+  background-color: $background-secondary-color; /* Tab'in üzerine gelindiğinde arka plan rengi */
+  img {
+    filter: invert(37%) sepia(96%) saturate(3216%) hue-rotate(198deg)
+      brightness(101%) contrast(103%);
+  }
 
   .tabIcon:before {
     border-top-color: #0eb7da;
@@ -63,15 +331,12 @@
   border-right: none; /* Son tab'in sağ tarafında border olmaması için */
 }
 
-.tab.active {
-  background-color: #f5f5f5; /* Aktif olan sekmenin arka plan rengi */
-}
-
 .tabIcon {
-  margin-right: 5px;
   border: 1px solid transparent; /* Tab ikonunun etrafında border */
-  margin-right: 5px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   & img {
     width: 32px;
     height: 32px;
@@ -83,13 +348,54 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 56px;
     border-radius: 50%;
   }
   &::before {
     top: 0;
     left: 0;
-    border: 2px solid transparent;
+    border: 1px solid #00000014;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(150%);
+    opacity: 0;
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(150%);
+    opacity: 0;
   }
 }
 

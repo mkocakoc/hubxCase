@@ -1,5 +1,63 @@
 
+@font-face {
+  font-family: 'sfpro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('sfpro'), url('../src/assets/fonts/sfpro.OTF') format('opentype');
+}
+body {
+  font-family: 'sfpro', serif;
+  font-size: 48px;
+  overflow: hidden;
+}
 
 body {
   display: block;
+  
+}
+body * {
+  font-family: "sfpro";  
+}
+
+.container {
+ padding-left: 24px;
+  padding-right: 24px;
+}
+
+img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #0381ff;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0381ff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #0381ff;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }

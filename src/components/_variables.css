@@ -1,0 +1,13 @@
+button.primary {
+  padding: 15px 20px;
+  border: 1px solid #00000029;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.87px;
+  text-align: center;
+  background: transparent;
+}
+
+button.primary:hover {
+  background-color: #0381FF08;
+}
