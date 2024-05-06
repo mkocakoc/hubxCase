@@ -100,8 +100,9 @@ button.primary:hover {
 @media screen and (min-width: 768px) {
   .tabContent.show.frametwo .icons__image1 {
     width: unset;
-    transform: translate(50%, 48%);
-    scale: 0.9;
+    transform: translate(60%, 48%);
+    scale: 0.93;
+    width: 100%;
   }
 }
 
@@ -117,8 +118,9 @@ button.primary:hover {
 @media screen and (min-width: 768px) {
   .tabContent.show.frametwo .icons__image2 {
     width: unset;
-    transform: translate(47%, 103%);
-    scale: 0.95;
+    transform: translate(58%, 102%);
+    scale: 0.97;
+    width: 100%;
   }
 }
 
@@ -134,7 +136,8 @@ button.primary:hover {
 @media screen and (min-width: 768px) {
   .tabContent.show.frametwo .icons__image3 {
     width: unset;
-    transform: translate(45%, 3%);
+    transform: translate(57%, 3%);
+    width: 100%;
   }
 }
 
@@ -158,6 +161,12 @@ button.primary:hover {
   animation: fade-in 1s ease;
 }
 
+.tabContent.show.framethree .imageContainer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
 .tabContent.show.framethree .icons {
   position: absolute;
   bottom: 10px;
@@ -165,67 +174,45 @@ button.primary:hover {
 
 .tabContent.show.framethree .icons__image1 {
   position: absolute;
-  transform: translate(-110%, 260%);
-  width: 142px;
+  transform: translate(-430%, 0%);
 }
 
 @media screen and (min-width: 768px) {
   .tabContent.show.framethree .icons__image1 {
     width: unset;
-    transform: translate(-80%, 170%);
+    transform: translate(-500%, 0%);
   }
 }
 
 .tabContent.show.framethree .icons__image1 img {
-  animation: fade-in 0.6s ease;
+  animation: fade-in 1s ease;
 }
 
 .tabContent.show.framethree .icons__image2 {
-  transform: translate(135%, 200%);
-  width: 100px;
+  transform: translate(430%, 0%);
 }
 
 @media screen and (min-width: 768px) {
   .tabContent.show.framethree .icons__image2 {
     width: unset;
-    transform: translate(75%, 70%);
+    transform: translate(500%, 0%);
   }
 }
 
 .tabContent.show.framethree .icons__image2 img {
-  animation: fade-in 1s ease;
+  animation: fade-in 1.5s ease;
 }
 
-.tabContent.show.framethree .icons__image3 {
-  transform: translate(135%, 200%);
-  width: 100px;
-}
-
-@media screen and (min-width: 768px) {
-  .tabContent.show.framethree .icons__image3 {
-    width: unset;
-    transform: translate(75%, 70%);
-  }
-}
-
-.tabContent.show.framethree .icons__image3 img {
-  animation: fade-in 1s ease;
-}
-
-.tabContent.show.framethree .icons__image4 {
-  transform: translate(135%, 200%);
-  width: 100px;
+.tabContent.show.framefour .imageContainer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }
 
 @media screen and (min-width: 768px) {
-  .tabContent.show.framethree .icons__image4 {
-    width: unset;
-    transform: translate(75%, 70%);
+  .tabContent.show.framefour .imageContainer {
+    width: 50%;
   }
-}
-
-.tabContent.show.framethree .icons__image4 img {
-  animation: fade-in 1s ease;
 }
 
 .tabContent.show.framefour .icons {
@@ -233,13 +220,35 @@ button.primary:hover {
   bottom: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .tabContent.show.framefour .icons {
+    bottom: 25px;
+    left: 101px;
+  }
+}
+
 .tabContent.show.framefour .icons__image1 {
   position: absolute;
   bottom: 10px;
 }
 
-.tabContent.show.framefour .icons img {
+.tabContent.show.framefour .icons__image1 img {
   animation: slide-in 1s ease;
+}
+
+.tabContent.show.framefour .icons__image2 img {
+  animation: slide-in 1.5s ease;
+  scale: 0.7;
+}
+
+.tabContent.show.framefour .icons__image3 img {
+  animation: slide-in 2s ease;
+  scale: 0.7;
+}
+
+.tabContent.show.framefour .icons__image4 img {
+  animation: slide-in 2.5s ease;
+  scale: 0.7;
 }
 
 @media screen and (min-width: 768px) {
@@ -252,6 +261,7 @@ button.primary:hover {
 .tabContent .imageContainer {
   order: 2;
   position: relative;
+  min-width: 50%;
 }
 
 @media screen and (min-width: 768px) {

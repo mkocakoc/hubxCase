@@ -71,8 +71,9 @@
         width: 185px;
         @include desktop {
           width: unset;
-          transform: translate(50%, 48%);
-          scale: 0.9;
+          transform: translate(60%, 48%);
+          scale: 0.93;
+          width: 100%;
         }
         & img {
           animation: fade-in 1.3s ease;
@@ -83,8 +84,9 @@
         width: 195px;
         @include desktop {
           width: unset;
-          transform: translate(47%, 103%);
-          scale: 0.95;
+          transform: translate(58%, 102%);
+          scale: 0.97;
+          width: 100%;
         }
         & img {
           animation: fade-in 1.7s ease;
@@ -95,7 +97,8 @@
         width: 205px;
         @include desktop {
           width: unset;
-          transform: translate(45%, 3%);
+          transform: translate(57%, 3%);
+          width: 100%;
         }
         & img {
           animation: fade-in 2.2s ease;
@@ -115,66 +118,79 @@
     }
   }
   &.show.framethree {
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+    }
     .icons {
       position: absolute;
       bottom: 10px;
       &__image1 {
         position: absolute;
-        transform: translate(-110%, 260%);
-        width: 142px;
+        transform: translate(-430%, 0%);
+
         @include desktop {
           width: unset;
-          transform: translate(-80%, 170%);
+          transform: translate(-500%, 0%);
         }
         & img {
-          animation: fade-in 0.6s ease;
+          animation: fade-in 1s ease;
         }
       }
       &__image2 {
-        transform: translate(135%, 200%);
-        width: 100px;
+        transform: translate(430%, 0%);
+
         @include desktop {
           width: unset;
-          transform: translate(75%, 70%);
+          transform: translate(500%, 0%);
         }
         & img {
-          animation: fade-in 1s ease;
-        }
-      }
-      &__image3 {
-        transform: translate(135%, 200%);
-        width: 100px;
-        @include desktop {
-          width: unset;
-          transform: translate(75%, 70%);
-        }
-        & img {
-          animation: fade-in 1s ease;
-        }
-      }
-      &__image4 {
-        transform: translate(135%, 200%);
-        width: 100px;
-        @include desktop {
-          width: unset;
-          transform: translate(75%, 70%);
-        }
-        & img {
-          animation: fade-in 1s ease;
+          animation: fade-in 1.5s ease;
         }
       }
     }
   }
   &.show.framefour {
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      @include desktop {
+        width: 50%;
+      }
+    }
     .icons {
       position: absolute;
       bottom: 10px;
+      @include desktop {
+        bottom: 25px;
+        left: 101px;
+      }
       &__image1 {
         position: absolute;
         bottom: 10px;
+        & img {
+          animation: slide-in 1s ease;
+        }
       }
-      & img {
-        animation: slide-in 1s ease;
+      &__image2 {
+        & img {
+          animation: slide-in 1.5s ease;
+          scale: 0.7;
+        }
+      }
+      &__image3 {
+        & img {
+          animation: slide-in 2s ease;
+          scale: 0.7;
+        }
+      }
+      &__image4 {
+        & img {
+          animation: slide-in 2.5s ease;
+          scale: 0.7;
+        }
       }
     }
   }
@@ -187,13 +203,14 @@
   .imageContainer {
     order: 2;
     position: relative;
+    min-width: 50%;
 
     @include desktop {
       order: unset;
     }
 
     .bgImage {
-      position: relative;    
+      position: relative;
     }
 
     .icons {

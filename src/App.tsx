@@ -32,7 +32,7 @@ const App: React.FC = () => {
       frameID: "frameone"
     },
     {
-      backgroundImage: "../src/assets/images/contents/phone.png",
+      backgroundImage: "../src/assets/images/bg/phone.png",
       image: "../src/assets/images/contents/filepreview.svg",
       image2: "../src/assets/images/contents/filepreview.svg",
       image3: "../src/assets/images/contents/filepreview.svg",
@@ -45,7 +45,7 @@ const App: React.FC = () => {
       frameID: "frametwo"
     },
     {
-      backgroundImage: "../src/assets/images/contents/phone.png",
+      backgroundImage: "../src/assets/images/bg/signstampbg.png",
       image: "../src/assets/images/contents/brightnes.svg",
       image2: "../src/assets/images/contents/contrast.svg",     
       title: "Unique Filters",
@@ -57,7 +57,7 @@ const App: React.FC = () => {
       frameID: "framethree"
     },
     {
-      backgroundImage: "../src/assets/images/contents/phone.png",
+      backgroundImage: "../src/assets/images/bg/signstampbg.png",
       image: "../src/assets/images/contents/arrow.svg",
       image2: "../src/assets/images/contents/pdf.svg",
       image3: "../src/assets/images/contents/jpg.svg",
