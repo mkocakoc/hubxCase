@@ -8,8 +8,8 @@ import TabContent from './components/Tabcontent/Tabcontent';
 const App: React.FC = () => {
   const tabContents = [
     {
-      
-      image: "../src/assets/images/contents/phone.png",    
+
+      image: "../src/assets/images/contents/phone.png",
       title: "Scan with Ease",
       subTitle: "Document Scanner",
       description: "Scan any document instantly with your mobile device by just a few steps. Save as PDF,JPG,ZIP,TXT and Word format. ",
@@ -22,7 +22,7 @@ const App: React.FC = () => {
       backgroundImage: "../src/assets/images/bg/signstampbg.png",
       image: "../src/assets/images/contents/signature.svg",
       image2: "../src/assets/images/contents/complated.svg",
-      
+
       title: "One-Tap Focus",
       subTitle: "Sign & Stamp",
       description: "Draw, scan or import your signature and stamp with a simple touch. Sign and stamp any document with just a single tap!",
@@ -47,7 +47,7 @@ const App: React.FC = () => {
     {
       backgroundImage: "../src/assets/images/bg/signstampbg.png",
       image: "../src/assets/images/contents/brightnes.svg",
-      image2: "../src/assets/images/contents/contrast.svg",     
+      image2: "../src/assets/images/contents/contrast.svg",
       title: "Unique Filters",
       subTitle: "Advanced fılters",
       description: "Apply advanced filters and enhance quality with various custom made filters. Manually edit brightness and contrast by your own choice on the custom filters.",
@@ -69,16 +69,16 @@ const App: React.FC = () => {
       text: "Export & Share",
       buttonText: "Learn More",
       frameID: "framefour"
-
-
     }
   ];
 
-  const[activeTab, setActiveTab] = React.useState(0);
+  const [activeTab, setActiveTab] = React.useState(0);
 
   function handleActiveTab(index: number) {
-    setActiveTab(index);    
+    setActiveTab(index);
   }
+
+  console.log(tabContents[activeTab].frameID);
 
   return (
     <div className={styles.app}>
@@ -88,7 +88,7 @@ const App: React.FC = () => {
             <TabContent
               frameID={tabContents[i].frameID}
               tabIndex={i}
-              activeTab={activeTab}              
+              activeTab={activeTab}
               key={i}
               backgroundImage={tabContents[i].backgroundImage}
               image={tabContents[i].image}
@@ -98,7 +98,7 @@ const App: React.FC = () => {
               title={tabContents[i].title}
               subTitle={tabContents[i].subTitle}
               description={tabContents[i].description}
-              buttonText= {tabContents[i].buttonText}
+              buttonText={tabContents[i].buttonText}
             />
           );
         })}
@@ -106,11 +106,11 @@ const App: React.FC = () => {
       <div className={styles.tabContainer}>
         {Array.from({ length: tabContents.length }, (_, i) => {
           return (
-            <Tab tabIndex={i}  activeTab={activeTab} handleActiveTab={handleActiveTab} key={i} icon={tabContents[i].icon} text={tabContents[i].text} />
+            <Tab tabIndex={i} activeTab={activeTab} handleActiveTab={handleActiveTab} key={i} icon={tabContents[i].icon} text={tabContents[i].text} />
           );
         })}
       </div>
-      
+
     </div>
   );
 };
